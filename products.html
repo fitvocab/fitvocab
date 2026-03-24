@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — FitVocab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">FitVocab</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <p class="section-eyebrow">Our Collection</p>
+      <h1 class="page-hero-title">The Shop</h1>
+      <p class="page-hero-sub">Premium apparel & equipment for the relentless athlete</p>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="shop-section section">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="apparel">Apparel</button>
+          <button class="filter-btn" data-filter="equipment">Equipment</button>
+        </div>
+        <div class="sort-wrap">
+          <select class="sort-select" id="sortSelect">
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="products-grid" id="productsGrid">
+
+        <div class="product-card" data-cat="apparel" data-price="1299">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-1"></div>
+            <div class="product-tag">New</div>
+            <div class="product-hover">
+              <a href="#" class="btn-quick" onclick="openModal('Elite Training Tee','Apparel','₹1,299','product-img-1')">Quick View</a>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Apparel</p>
+            <h4 class="product-name">Elite Training Tee</h4>
+            <p class="product-price">₹1,299</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="equipment" data-price="2499">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-2"></div>
+            <div class="product-hover">
+              <a href="#" class="btn-quick" onclick="openModal('Pro Resistance Set','Equipment','₹2,499','product-img-2')">Quick View</a>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Equipment</p>
+            <h4 class="product-name">Pro Resistance Set</h4>
+            <p class="product-price">₹2,499</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="apparel" data-price="2199">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-3"></div>
+            <div class="product-tag">Popular</div>
+            <div class="product-hover">
+              <a href="#" class="btn-quick" onclick="openModal('Precision Joggers','Apparel','₹2,199','product-img-3')">Quick View</a>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Apparel</p>
+            <h4 class="product-name">Precision Joggers</h4>
+            <p class="product-price">₹2,199</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="equipment" data-price="3999">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-4"></div>
+            <div class="product-hover">
+              <a href="#" class="btn-quick" onclick="openModal('Carbon Kettlebell 16kg','Equipment','₹3,999','product-img-4')">Quick View</a>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Equipment</p>
+            <h4 class="product-name">Carbon Kettlebell 16kg</h4>
+            <p class="product-price">₹3,999</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="apparel" data-price="1799">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-5"></div>
+            <div class="product-hover">
+              <a href="#" class="btn-quick" onclick="openModal('Compression Shorts','Apparel','₹1,799','product-img-5')">Quick View</a>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Apparel</p>
+            <h4 class="product-name">Compression Shorts</h4>
+            <p class="product-price">₹1,799</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="equipment" data-price="5499">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-6"></div>
+            <div class="product-tag">Limited</div>
+            <div class="product-hover">
+              <a href="#" class="btn-quick" onclick="openModal('Olympic Barbell 20kg','Equipment','₹5,499','product-img-6')">Quick View</a>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Equipment</p>
+            <h4 class="product-name">Olympic Barbell 20kg</h4>
+            <p class="product-price">₹5,499</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="apparel" data-price="3299">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-7"></div>
+            <div class="product-hover">
+              <a href="#" class="btn-quick" onclick="openModal('Apex Hoodie','Apparel','₹3,299','product-img-7')">Quick View</a>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Apparel</p>
+            <h4 class="product-name">Apex Hoodie</h4>
+            <p class="product-price">₹3,299</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-cat="equipment" data-price="1199">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-8"></div>
+            <div class="product-hover">
+              <a href="#" class="btn-quick" onclick="openModal('Jump Rope Pro','Equipment','₹1,199','product-img-8')">Quick View</a>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Equipment</p>
+            <h4 class="product-name">Jump Rope Pro</h4>
+            <p class="product-price">₹1,199</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-img-wrap">
+        <div class="modal-img" id="modalImg"></div>
+      </div>
+      <div class="modal-info">
+        <p class="product-cat" id="modalCat"></p>
+        <h3 id="modalName"></h3>
+        <p class="modal-price" id="modalPrice"></p>
+        <p class="modal-desc">Premium quality, engineered for performance. Free shipping on orders above ₹999 across India.</p>
+        <div class="modal-sizes" id="modalSizes">
+          <p class="modal-label">Size</p>
+          <div class="size-options">
+            <button class="size-btn" onclick="selectSize(this)">S</button>
+            <button class="size-btn" onclick="selectSize(this)">M</button>
+            <button class="size-btn" onclick="selectSize(this)">L</button>
+            <button class="size-btn" onclick="selectSize(this)">XL</button>
+          </div>
+        </div>
+        <button class="btn-primary modal-buy">Add to Cart — Coming Soon</button>
+        <p class="modal-note">Payment & cart launching soon. Join our newsletter for early access.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-logo">FitVocab</h3>
+          <p>Premium fitness apparel & equipment for the serious athlete.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h5>Shop</h5>
+          <ul>
+            <li><a href="products.html?cat=apparel">Apparel</a></li>
+            <li><a href="products.html?cat=equipment">Equipment</a></li>
+            <li><a href="products.html">All Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 FitVocab. All rights reserved. | fitvocab.in</p>
+        <p><a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
