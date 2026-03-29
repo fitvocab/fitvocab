@@ -1210,19 +1210,19 @@ blockquote {
 
 /* SOLD OUT STATES */
 .sold-out-tag {
-  background: #333 !important;
-  color: #aaa !important;
+  background: #7a1a1a !important;
+  color: #ffaaaa !important;
 }
 .sold-out-price {
-  color: var(--grey) !important;
+  color: #cc4444 !important;
   font-style: italic;
   font-size: 0.85rem !important;
 }
 .sold-out-pill {
   display: inline-block;
   padding: 6px 18px;
-  border: 1px solid #444;
-  color: #888;
+  border: 1px solid #7a1a1a;
+  color: #cc4444;
   font-family: 'Tenor Sans', sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.2em;
