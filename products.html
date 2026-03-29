@@ -37,178 +37,120 @@
   <section class="page-hero">
     <div class="page-hero-bg"></div>
     <div class="container">
-      <p class="section-eyebrow">Our Collection</p>
+      <p class="section-eyebrow">Debut Collection</p>
       <h1 class="page-hero-title">The Shop</h1>
-      <p class="page-hero-sub">Premium apparel & equipment for the relentless athlete</p>
+      <p class="page-hero-sub">Premium apparel for the relentless athlete</p>
     </div>
   </section>
 
-  <!-- FILTER BAR -->
+  <!-- SOLD OUT BANNER -->
+  <div class="sold-out-banner">
+    <p>⚡ Our debut collection sold out. <a href="contact.html">Join the waitlist</a> to be first for the next drop.</p>
+  </div>
+
+  <!-- SHOP SECTION -->
   <section class="shop-section section">
     <div class="container">
-      <div class="filter-bar">
-        <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="apparel">Apparel</button>
-          <button class="filter-btn" data-filter="equipment">Equipment</button>
+
+      <!-- PRODUCT DETAIL LAYOUT — Black Tee -->
+      <div class="product-detail-card">
+        <div class="product-detail-gallery">
+          <div class="gallery-main">
+            <img src="images/tshirt-black.png" alt="FitVocab Signature Tee Black — Front" id="galleryMain1"/>
+          </div>
+          <div class="gallery-thumbs">
+            <div class="thumb active" onclick="switchImg('galleryMain1','images/tshirt-black.png',this)">
+              <img src="images/tshirt-black.png" alt="Black tee"/>
+            </div>
+          </div>
         </div>
-        <div class="sort-wrap">
-          <select class="sort-select" id="sortSelect">
-            <option value="default">Sort: Featured</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
-          </select>
+        <div class="product-detail-info">
+          <p class="product-cat">Apparel · Signature Collection</p>
+          <h2 class="product-detail-name">Signature Training Tee</h2>
+          <p class="product-detail-color">Colourway: <span>Black</span></p>
+          <div class="sold-out-pill">Sold Out</div>
+          <div class="product-detail-desc">
+            <p>Our debut performance tee, built for the serious athlete. Moisture-wicking, breathable, and tailored for the Indian physique.</p>
+            <ul class="product-features">
+              <li>◈ Premium dry-fit performance fabric</li>
+              <li>◈ Raglan sleeve construction for full range of motion</li>
+              <li>◈ Pre-shrunk — stays true to size after washes</li>
+              <li>◈ Available in S, M, L, XL</li>
+            </ul>
+          </div>
+          <div class="size-row">
+            <p class="modal-label">Size</p>
+            <div class="size-options">
+              <button class="size-btn disabled" disabled>S</button>
+              <button class="size-btn disabled" disabled>M</button>
+              <button class="size-btn disabled" disabled>L</button>
+              <button class="size-btn disabled" disabled>XL</button>
+            </div>
+          </div>
+          <button class="btn-soldout" disabled>Sold Out — Notify Me</button>
+          <a href="contact.html" class="waitlist-link">→ Join the waitlist for this colour</a>
         </div>
       </div>
 
-      <!-- PRODUCTS GRID -->
-      <div class="products-grid" id="productsGrid">
+      <div class="product-divider"></div>
 
-        <div class="product-card" data-cat="apparel" data-price="1299">
-          <div class="product-img-wrap">
-            <div class="product-img product-img-1"></div>
-            <div class="product-tag">New</div>
-            <div class="product-hover">
-              <a href="#" class="btn-quick" onclick="openModal('Elite Training Tee','Apparel','₹1,299','product-img-1')">Quick View</a>
+      <!-- PRODUCT DETAIL LAYOUT — White Tee -->
+      <div class="product-detail-card reverse">
+        <div class="product-detail-gallery">
+          <div class="gallery-main">
+            <img src="images/tshirt-white.png" alt="FitVocab Signature Tee White — Front" id="galleryMain2"/>
+          </div>
+          <div class="gallery-thumbs">
+            <div class="thumb active" onclick="switchImg('galleryMain2','images/tshirt-white.png',this)">
+              <img src="images/tshirt-white.png" alt="White tee"/>
             </div>
           </div>
-          <div class="product-info">
-            <p class="product-cat">Apparel</p>
-            <h4 class="product-name">Elite Training Tee</h4>
-            <p class="product-price">₹1,299</p>
-          </div>
         </div>
-
-        <div class="product-card" data-cat="equipment" data-price="2499">
-          <div class="product-img-wrap">
-            <div class="product-img product-img-2"></div>
-            <div class="product-hover">
-              <a href="#" class="btn-quick" onclick="openModal('Pro Resistance Set','Equipment','₹2,499','product-img-2')">Quick View</a>
+        <div class="product-detail-info">
+          <p class="product-cat">Apparel · Signature Collection</p>
+          <h2 class="product-detail-name">Signature Training Tee</h2>
+          <p class="product-detail-color">Colourway: <span>White</span></p>
+          <div class="sold-out-pill">Sold Out</div>
+          <div class="product-detail-desc">
+            <p>The clean colourway of our debut tee. Same premium construction, refined in white. A gym classic, elevated.</p>
+            <ul class="product-features">
+              <li>◈ Premium dry-fit performance fabric</li>
+              <li>◈ Raglan sleeve construction for full range of motion</li>
+              <li>◈ Pre-shrunk — stays true to size after washes</li>
+              <li>◈ Available in S, M, L, XL</li>
+            </ul>
+          </div>
+          <div class="size-row">
+            <p class="modal-label">Size</p>
+            <div class="size-options">
+              <button class="size-btn disabled" disabled>S</button>
+              <button class="size-btn disabled" disabled>M</button>
+              <button class="size-btn disabled" disabled>L</button>
+              <button class="size-btn disabled" disabled>XL</button>
             </div>
           </div>
-          <div class="product-info">
-            <p class="product-cat">Equipment</p>
-            <h4 class="product-name">Pro Resistance Set</h4>
-            <p class="product-price">₹2,499</p>
-          </div>
+          <button class="btn-soldout" disabled>Sold Out — Notify Me</button>
+          <a href="contact.html" class="waitlist-link">→ Join the waitlist for this colour</a>
         </div>
-
-        <div class="product-card" data-cat="apparel" data-price="2199">
-          <div class="product-img-wrap">
-            <div class="product-img product-img-3"></div>
-            <div class="product-tag">Popular</div>
-            <div class="product-hover">
-              <a href="#" class="btn-quick" onclick="openModal('Precision Joggers','Apparel','₹2,199','product-img-3')">Quick View</a>
-            </div>
-          </div>
-          <div class="product-info">
-            <p class="product-cat">Apparel</p>
-            <h4 class="product-name">Precision Joggers</h4>
-            <p class="product-price">₹2,199</p>
-          </div>
-        </div>
-
-        <div class="product-card" data-cat="equipment" data-price="3999">
-          <div class="product-img-wrap">
-            <div class="product-img product-img-4"></div>
-            <div class="product-hover">
-              <a href="#" class="btn-quick" onclick="openModal('Carbon Kettlebell 16kg','Equipment','₹3,999','product-img-4')">Quick View</a>
-            </div>
-          </div>
-          <div class="product-info">
-            <p class="product-cat">Equipment</p>
-            <h4 class="product-name">Carbon Kettlebell 16kg</h4>
-            <p class="product-price">₹3,999</p>
-          </div>
-        </div>
-
-        <div class="product-card" data-cat="apparel" data-price="1799">
-          <div class="product-img-wrap">
-            <div class="product-img product-img-5"></div>
-            <div class="product-hover">
-              <a href="#" class="btn-quick" onclick="openModal('Compression Shorts','Apparel','₹1,799','product-img-5')">Quick View</a>
-            </div>
-          </div>
-          <div class="product-info">
-            <p class="product-cat">Apparel</p>
-            <h4 class="product-name">Compression Shorts</h4>
-            <p class="product-price">₹1,799</p>
-          </div>
-        </div>
-
-        <div class="product-card" data-cat="equipment" data-price="5499">
-          <div class="product-img-wrap">
-            <div class="product-img product-img-6"></div>
-            <div class="product-tag">Limited</div>
-            <div class="product-hover">
-              <a href="#" class="btn-quick" onclick="openModal('Olympic Barbell 20kg','Equipment','₹5,499','product-img-6')">Quick View</a>
-            </div>
-          </div>
-          <div class="product-info">
-            <p class="product-cat">Equipment</p>
-            <h4 class="product-name">Olympic Barbell 20kg</h4>
-            <p class="product-price">₹5,499</p>
-          </div>
-        </div>
-
-        <div class="product-card" data-cat="apparel" data-price="3299">
-          <div class="product-img-wrap">
-            <div class="product-img product-img-7"></div>
-            <div class="product-hover">
-              <a href="#" class="btn-quick" onclick="openModal('Apex Hoodie','Apparel','₹3,299','product-img-7')">Quick View</a>
-            </div>
-          </div>
-          <div class="product-info">
-            <p class="product-cat">Apparel</p>
-            <h4 class="product-name">Apex Hoodie</h4>
-            <p class="product-price">₹3,299</p>
-          </div>
-        </div>
-
-        <div class="product-card" data-cat="equipment" data-price="1199">
-          <div class="product-img-wrap">
-            <div class="product-img product-img-8"></div>
-            <div class="product-hover">
-              <a href="#" class="btn-quick" onclick="openModal('Jump Rope Pro','Equipment','₹1,199','product-img-8')">Quick View</a>
-            </div>
-          </div>
-          <div class="product-info">
-            <p class="product-cat">Equipment</p>
-            <h4 class="product-name">Jump Rope Pro</h4>
-            <p class="product-price">₹1,199</p>
-          </div>
-        </div>
-
       </div>
+
     </div>
   </section>
 
-  <!-- PRODUCT MODAL -->
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
-    <div class="modal" id="modal" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <div class="modal-img-wrap">
-        <div class="modal-img" id="modalImg"></div>
-      </div>
-      <div class="modal-info">
-        <p class="product-cat" id="modalCat"></p>
-        <h3 id="modalName"></h3>
-        <p class="modal-price" id="modalPrice"></p>
-        <p class="modal-desc">Premium quality, engineered for performance. Free shipping on orders above ₹999 across India.</p>
-        <div class="modal-sizes" id="modalSizes">
-          <p class="modal-label">Size</p>
-          <div class="size-options">
-            <button class="size-btn" onclick="selectSize(this)">S</button>
-            <button class="size-btn" onclick="selectSize(this)">M</button>
-            <button class="size-btn" onclick="selectSize(this)">L</button>
-            <button class="size-btn" onclick="selectSize(this)">XL</button>
-          </div>
-        </div>
-        <button class="btn-primary modal-buy">Add to Cart — Coming Soon</button>
-        <p class="modal-note">Payment & cart launching soon. Join our newsletter for early access.</p>
+  <!-- COMING SOON STRIP -->
+  <section class="coming-soon-strip">
+    <div class="container">
+      <div class="coming-soon-inner">
+        <p class="section-eyebrow">What's Next</p>
+        <h2>More drops coming soon.</h2>
+        <p>Joggers, hoodies, and new colourways are in the works. Subscribe to get notified first.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Notify Me</button>
+        </form>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -216,7 +158,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-logo">FitVocab</h3>
-          <p>Premium fitness apparel & equipment for the serious athlete.</p>
+          <p>Premium fitness apparel for the serious athlete.</p>
           <div class="footer-social">
             <a href="#" aria-label="Instagram">IG</a>
             <a href="#" aria-label="Twitter">TW</a>
@@ -226,9 +168,8 @@
         <div class="footer-links">
           <h5>Shop</h5>
           <ul>
-            <li><a href="products.html?cat=apparel">Apparel</a></li>
-            <li><a href="products.html?cat=equipment">Equipment</a></li>
             <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html">Apparel</a></li>
           </ul>
         </div>
         <div class="footer-links">

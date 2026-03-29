@@ -2,6 +2,15 @@
 // FitVocab — Main JS
 // ============================================
 
+// GALLERY IMAGE SWITCHER
+function switchImg(mainId, src, thumbEl) {
+  const mainImg = document.getElementById(mainId);
+  if (mainImg) mainImg.src = src;
+  const allThumbs = thumbEl.closest('.gallery-thumbs').querySelectorAll('.thumb');
+  allThumbs.forEach(t => t.classList.remove('active'));
+  thumbEl.classList.add('active');
+}
+
 // NAV SCROLL EFFECT
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
