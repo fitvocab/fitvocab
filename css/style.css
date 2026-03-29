@@ -1076,6 +1076,18 @@ blockquote {
   border: 1px solid rgba(201,169,110,0.1);
   padding: 48px;
 }
+.gform-wrap {
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(201,169,110,0.1);
+  background: #fff;
+}
+.gform-wrap iframe {
+  display: block;
+  width: 100%;
+  min-height: 780px;
+  border: none;
+}
 .contact-form { display: flex; flex-direction: column; gap: 24px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-group { display: flex; flex-direction: column; gap: 8px; }
