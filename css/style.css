@@ -326,10 +326,9 @@ em { font-style: italic; color: var(--gold); }
 
 .hero-badge {
   position: absolute;
-  bottom: 48px;
+  top: calc(var(--nav-h) + 40px);
   right: 60px;
   z-index: 1;
-  animation: badgeSpin 20s linear infinite;
 }
 .badge-ring {
   position: relative;
