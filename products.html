@@ -48,36 +48,42 @@
     <p>⚡ Our debut collection sold out. <a href="contact.html">Join the waitlist</a> to be first for the next drop.</p>
   </div>
 
-  <!-- SHOP SECTION -->
+  <!-- PRODUCT DETAIL -->
   <section class="shop-section section">
     <div class="container">
-
-      <!-- PRODUCT DETAIL LAYOUT — Black Tee -->
       <div class="product-detail-card">
+
+        <!-- GALLERY -->
         <div class="product-detail-gallery">
           <div class="gallery-main">
-            <img src="images/tshirt-black.png" alt="FitVocab Signature Tee Black — Front" id="galleryMain1"/>
+            <img src="images/tshirt-grey.jpg" alt="FitVocab Signature Tee — Charcoal Grey" id="galleryMain1"/>
           </div>
           <div class="gallery-thumbs">
-            <div class="thumb active" onclick="switchImg('galleryMain1','images/tshirt-black.png',this)">
-              <img src="images/tshirt-black.png" alt="Black tee"/>
+            <div class="thumb active" onclick="switchImg('galleryMain1','images/tshirt-grey.jpg',this)">
+              <img src="images/tshirt-grey.jpg" alt="Charcoal Grey"/>
             </div>
           </div>
         </div>
+
+        <!-- INFO -->
         <div class="product-detail-info">
-          <p class="product-cat">Apparel · Signature Collection</p>
-          <h2 class="product-detail-name">Signature Training Tee</h2>
-          <p class="product-detail-color">Colourway: <span>Black</span></p>
+          <p class="product-cat">Apparel · Debut Collection</p>
+          <h2 class="product-detail-name">FitVocab Signature Tee</h2>
+          <p class="product-detail-color">Colourway: <span>Charcoal Grey</span></p>
+          <p class="product-detail-tagline">"Fit. The only vocab I know."</p>
+          <div class="product-detail-price">₹599</div>
           <div class="sold-out-pill">Sold Out</div>
+
           <div class="product-detail-desc">
-            <p>Our debut performance tee, built for the serious athlete. Moisture-wicking, breathable, and tailored for the Indian physique.</p>
+            <p>Our debut oversized tee in washed charcoal. Premium cotton, garment-dyed, built for the gym and the streets.</p>
             <ul class="product-features">
-              <li>◈ Premium dry-fit performance fabric</li>
-              <li>◈ Raglan sleeve construction for full range of motion</li>
+              <li>◈ 100% premium cotton, garment washed</li>
+              <li>◈ Oversized drop-shoulder fit</li>
               <li>◈ Pre-shrunk — stays true to size after washes</li>
-              <li>◈ Available in S, M, L, XL</li>
+              <li>◈ Free shipping above ₹999</li>
             </ul>
           </div>
+
           <div class="size-row">
             <p class="modal-label">Size</p>
             <div class="size-options">
@@ -85,55 +91,15 @@
               <button class="size-btn disabled" disabled>M</button>
               <button class="size-btn disabled" disabled>L</button>
               <button class="size-btn disabled" disabled>XL</button>
+              <button class="size-btn disabled" disabled>XXL</button>
             </div>
           </div>
+
           <button class="btn-soldout" disabled>Sold Out — Notify Me</button>
-          <a href="contact.html" class="waitlist-link">→ Join the waitlist for this colour</a>
+          <a href="contact.html" class="waitlist-link">→ Join the waitlist for restock</a>
         </div>
+
       </div>
-
-      <div class="product-divider"></div>
-
-      <!-- PRODUCT DETAIL LAYOUT — White Tee -->
-      <div class="product-detail-card reverse">
-        <div class="product-detail-gallery">
-          <div class="gallery-main">
-            <img src="images/tshirt-white.png" alt="FitVocab Signature Tee White — Front" id="galleryMain2"/>
-          </div>
-          <div class="gallery-thumbs">
-            <div class="thumb active" onclick="switchImg('galleryMain2','images/tshirt-white.png',this)">
-              <img src="images/tshirt-white.png" alt="White tee"/>
-            </div>
-          </div>
-        </div>
-        <div class="product-detail-info">
-          <p class="product-cat">Apparel · Signature Collection</p>
-          <h2 class="product-detail-name">Signature Training Tee</h2>
-          <p class="product-detail-color">Colourway: <span>White</span></p>
-          <div class="sold-out-pill">Sold Out</div>
-          <div class="product-detail-desc">
-            <p>The clean colourway of our debut tee. Same premium construction, refined in white. A gym classic, elevated.</p>
-            <ul class="product-features">
-              <li>◈ Premium dry-fit performance fabric</li>
-              <li>◈ Raglan sleeve construction for full range of motion</li>
-              <li>◈ Pre-shrunk — stays true to size after washes</li>
-              <li>◈ Available in S, M, L, XL</li>
-            </ul>
-          </div>
-          <div class="size-row">
-            <p class="modal-label">Size</p>
-            <div class="size-options">
-              <button class="size-btn disabled" disabled>S</button>
-              <button class="size-btn disabled" disabled>M</button>
-              <button class="size-btn disabled" disabled>L</button>
-              <button class="size-btn disabled" disabled>XL</button>
-            </div>
-          </div>
-          <button class="btn-soldout" disabled>Sold Out — Notify Me</button>
-          <a href="contact.html" class="waitlist-link">→ Join the waitlist for this colour</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -143,7 +109,7 @@
       <div class="coming-soon-inner">
         <p class="section-eyebrow">What's Next</p>
         <h2>More drops coming soon.</h2>
-        <p>Joggers, hoodies, and new colourways are in the works. Subscribe to get notified first.</p>
+        <p>New colours and styles are in the works. Subscribe to get notified first.</p>
         <form class="newsletter-form" onsubmit="handleNewsletter(event)">
           <input type="email" placeholder="Your email address" required>
           <button type="submit">Notify Me</button>
