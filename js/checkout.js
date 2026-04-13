@@ -143,8 +143,9 @@ function showSuccessModal(data) {
     <div class="order-row"><span>Order ID</span><span>${data.paymentId}</span></div>
     <div class="order-row"><span>Product</span><span>${data.product}</span></div>
     <div class="order-row"><span>Size</span><span>${data.size}</span></div>
-    ${data.coupon ? `<div class="order-row"><span>Coupon</span><span>${data.coupon} (−₹${data.discount})</span></div>` : ''}
-    <div class="order-row"><span>Amount Paid</span><span>₹${data.finalPrice}</span></div>
+    <div class="order-row"><span>Base Price</span><span>₹${data.basePrice}</span></div>
+    ${data.coupon ? `<div class="order-row"><span>Coupon</span><span>${data.coupon} − ₹${data.discount}</span></div>` : ''}
+    <div class="order-row total-row"><span>Total Paid</span><span>₹${data.finalPrice}</span></div>
     <div class="order-row"><span>Date</span><span>${data.date}</span></div>
   `;
   document.getElementById('successModal').classList.add('open');

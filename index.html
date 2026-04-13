@@ -128,54 +128,21 @@
   <!-- SUCCESS MODAL -->
   <div class="modal-overlay" id="successModal">
     <div class="modal success-modal">
-      <div class="success-icon">✓</div>
-      <h3>Order Confirmed!</h3>
-      <p>Thank you for your purchase. Your order has been placed successfully.</p>
-      <div class="order-summary" id="orderSummary"></div>
-      <button class="btn-primary" onclick="downloadInvoice()" style="width:100%;text-align:center;margin-top:16px;">Download Invoice</button>
-      <button class="btn-ghost" onclick="closeSuccess()" style="width:100%;text-align:center;margin-top:12px;">Continue Shopping</button>
+      <div class="success-modal-left">
+        <div class="success-icon">✓</div>
+        <h3>Order<br>Confirmed!</h3>
+        <p>Thank you for your purchase. Your order has been placed successfully.</p>
+        <button class="btn-primary" onclick="downloadInvoice()">Download Invoice</button>
+        <button class="btn-ghost" onclick="closeSuccess()">Continue Shopping</button>
+      </div>
+      <div class="success-modal-right">
+        <div class="order-summary">
+          <div class="order-summary-title">Order Summary</div>
+          <div id="orderSummary"></div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- BRAND STATEMENT -->
-  <section class="brand-statement">
-    <div class="statement-inner">
-      <div class="statement-line"></div>
-      <blockquote>"Every rep, every set, every drop of sweat — <em>deserves better gear.</em>"</blockquote>
-      <div class="statement-line"></div>
-    </div>
-  </section>
-
-  <!-- WHY FITVOCAB -->
-  <section class="why section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">The FitVocab Standard</p>
-        <h2 class="section-title">Why Choose Us</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">◈</div>
-          <h4>Premium Materials</h4>
-          <p>Performance-grade fabric built to last through your toughest sessions without losing shape or softness.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">◎</div>
-          <h4>Designed for India</h4>
-          <p>Cut, fit, and engineered for the Indian athlete — our climate, our physique, our intensity.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">◇</div>
-          <h4>Free Shipping</h4>
-          <p>Complimentary delivery across India on all orders above ₹999. No hidden charges, ever.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">○</div>
-          <h4>Easy Returns</h4>
-          <p>Not the right fit? 7-day hassle-free returns on all apparel. Your satisfaction is our standard.</p>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- NEWSLETTER -->
