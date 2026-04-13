@@ -82,7 +82,14 @@ function showCouponMsg(msg, type) {
 function initiatePayment() {
   if (!selectedSize) {
     document.getElementById('sizeError').style.display = 'inline';
-    document.querySelector('.size-row').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.size-row').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    alert('Please select a size before proceeding.');
+    return;
+  }
+
+  // Confirm Razorpay loaded
+  if (typeof Razorpay === 'undefined') {
+    alert('Payment system is loading. Please try again in a moment.');
     return;
   }
 
