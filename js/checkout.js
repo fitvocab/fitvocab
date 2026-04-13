@@ -139,14 +139,20 @@ function initiatePayment() {
 
 // ── Success modal ──────────────────────────
 function showSuccessModal(data) {
+  const couponRow = data.coupon
+    ? `<tr><td class="sr-label">Coupon</td><td class="sr-value">${data.coupon} &minus; &#8377;${data.discount}</td></tr>`
+    : '';
+
   document.getElementById('orderSummary').innerHTML = `
-    <div class="order-row"><span>Order ID</span><span>${data.paymentId}</span></div>
-    <div class="order-row"><span>Product</span><span>${data.product}</span></div>
-    <div class="order-row"><span>Size</span><span>${data.size}</span></div>
-    <div class="order-row"><span>Base Price</span><span>₹${data.basePrice}</span></div>
-    ${data.coupon ? `<div class="order-row"><span>Coupon</span><span>${data.coupon} − ₹${data.discount}</span></div>` : ''}
-    <div class="order-row total-row"><span>Total Paid</span><span>₹${data.finalPrice}</span></div>
-    <div class="order-row"><span>Date</span><span>${data.date}</span></div>
+    <table class="sr-table">
+      <tr><td class="sr-label">Order ID</td><td class="sr-value">${data.paymentId}</td></tr>
+      <tr><td class="sr-label">Product</td><td class="sr-value">${data.product}</td></tr>
+      <tr><td class="sr-label">Size</td><td class="sr-value">${data.size}</td></tr>
+      <tr><td class="sr-label">Base Price</td><td class="sr-value">&#8377;${data.basePrice}</td></tr>
+      ${couponRow}
+      <tr class="sr-total"><td class="sr-label">Total Paid</td><td class="sr-value">&#8377;${data.finalPrice}</td></tr>
+      <tr><td class="sr-label">Date</td><td class="sr-value">${data.date}</td></tr>
+    </table>
   `;
   document.getElementById('successModal').classList.add('open');
   document.body.style.overflow = 'hidden';
