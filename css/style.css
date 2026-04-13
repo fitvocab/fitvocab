@@ -1504,3 +1504,145 @@ blockquote {
 @media (max-width: 768px) {
   .home-product-split { grid-template-columns: 1fr; gap: 32px; }
 }
+
+/* ============================================
+   CHECKOUT STYLES
+   ============================================ */
+.price-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 4px 0;
+}
+.price-original {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--grey);
+  text-decoration: line-through;
+}
+.price-saving {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #6dbf6d;
+  background: rgba(109,191,109,0.1);
+  padding: 3px 10px;
+  border: 1px solid rgba(109,191,109,0.3);
+}
+
+/* COUPON */
+.coupon-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.coupon-input-wrap {
+  display: flex;
+  gap: 0;
+}
+.coupon-input-wrap input {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,169,110,0.2);
+  border-right: none;
+  padding: 12px 16px;
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: border-color var(--transition);
+}
+.coupon-input-wrap input:focus { border-color: rgba(201,169,110,0.5); }
+.coupon-input-wrap input::placeholder { text-transform: none; letter-spacing: 0; color: var(--grey); }
+.btn-apply {
+  padding: 12px 24px;
+  background: rgba(201,169,110,0.15);
+  border: 1px solid rgba(201,169,110,0.4);
+  color: var(--gold);
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.btn-apply:hover:not(:disabled) {
+  background: var(--gold);
+  color: var(--black);
+}
+.btn-apply:disabled { opacity: 0.6; cursor: not-allowed; }
+.coupon-msg { font-size: 0.82rem; min-height: 20px; }
+.coupon-msg.success { color: #6dbf6d; }
+.coupon-msg.error   { color: #e06060; }
+
+/* SIZE ERROR */
+.size-error {
+  color: #e06060;
+  font-size: 0.75rem;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  display: none;
+}
+
+/* BUY BUTTON */
+.btn-buy {
+  width: 100%;
+  text-align: center;
+  font-size: 0.78rem;
+  padding: 16px;
+  margin-top: 4px;
+}
+.secure-note {
+  font-size: 0.75rem;
+  color: var(--grey);
+  text-align: center;
+}
+
+/* SUCCESS MODAL */
+.success-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 40px;
+  max-width: 480px;
+  gap: 12px;
+}
+.success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(109,191,109,0.15);
+  border: 1px solid rgba(109,191,109,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #6dbf6d;
+  margin-bottom: 8px;
+}
+.success-modal h3 { font-size: 1.8rem; }
+.success-modal p  { color: var(--grey-lt); font-size: 0.9rem; }
+.order-summary {
+  width: 100%;
+  border: 1px solid rgba(201,169,110,0.15);
+  padding: 16px 20px;
+  margin-top: 8px;
+  text-align: left;
+}
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.82rem;
+}
+.order-row:last-child { border-bottom: none; }
+.order-row span:first-child { color: var(--grey); }
+.order-row span:last-child  { color: var(--white-2); text-align: right; word-break: break-all; }

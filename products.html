@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
 
@@ -66,7 +67,13 @@
           <h2 class="product-detail-name">FitVocab Signature Tee</h2>
           <p class="product-detail-color">Colourway: <span>Charcoal Grey</span></p>
           <p class="product-detail-tagline">"Fit. The only vocab I know."</p>
-          <div class="product-detail-price">₹599</div>
+
+          <!-- PRICE DISPLAY -->
+          <div class="price-block">
+            <span class="product-detail-price" id="displayPrice">₹599</span>
+            <span class="price-original" id="originalPrice" style="display:none;">₹599</span>
+            <span class="price-saving" id="priceSaving" style="display:none;"></span>
+          </div>
 
           <div class="product-detail-desc">
             <p>Our debut oversized tee in washed charcoal. Premium cotton, garment-dyed, built for the gym and the streets.</p>
@@ -78,24 +85,51 @@
             </ul>
           </div>
 
+          <!-- SIZE SELECTOR -->
           <div class="size-row">
-            <p class="modal-label">Size</p>
+            <p class="modal-label">Select Size <span class="size-error" id="sizeError">— Please select a size</span></p>
             <div class="size-options">
-              <button class="size-btn disabled" disabled>S</button>
-              <button class="size-btn disabled" disabled>M</button>
-              <button class="size-btn disabled" disabled>L</button>
-              <button class="size-btn disabled" disabled>XL</button>
-              <button class="size-btn disabled" disabled>XXL</button>
+              <button class="size-btn" onclick="selectSize(this)">S</button>
+              <button class="size-btn" onclick="selectSize(this)">M</button>
+              <button class="size-btn" onclick="selectSize(this)">L</button>
+              <button class="size-btn" onclick="selectSize(this)">XL</button>
+              <button class="size-btn" onclick="selectSize(this)">XXL</button>
             </div>
           </div>
 
-          <button class="btn-soldout" disabled>Sold Out — Notify Me</button>
-          <a href="contact.html" class="waitlist-link">→ Join the waitlist for restock</a>
+          <!-- COUPON -->
+          <div class="coupon-row">
+            <p class="modal-label">Coupon Code</p>
+            <div class="coupon-input-wrap">
+              <input type="text" id="couponInput" placeholder="Enter coupon code" maxlength="20"/>
+              <button class="btn-apply" id="applyBtn" onclick="applyCoupon()">Apply</button>
+            </div>
+            <p class="coupon-msg" id="couponMsg"></p>
+          </div>
+
+          <!-- BUY BUTTON -->
+          <button class="btn-primary btn-buy" id="buyBtn" onclick="initiatePayment()">
+            Buy Now — <span id="btnPrice">₹599</span>
+          </button>
+
+          <p class="secure-note">🔒 Secure payment via Razorpay · UPI · Cards · NetBanking</p>
         </div>
 
       </div>
     </div>
   </section>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal success-modal">
+      <div class="success-icon">✓</div>
+      <h3>Order Confirmed!</h3>
+      <p>Thank you for your purchase. Your order has been placed successfully.</p>
+      <div class="order-summary" id="orderSummary"></div>
+      <button class="btn-primary" onclick="downloadInvoice()" style="width:100%;text-align:center;margin-top:16px;">Download Invoice</button>
+      <button class="btn-ghost" onclick="closeSuccess()" style="width:100%;text-align:center;margin-top:12px;">Continue Shopping</button>
+    </div>
+  </div>
 
   <!-- COMING SOON STRIP -->
   <section class="coming-soon-strip">
@@ -155,5 +189,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
 </body>
 </html>
