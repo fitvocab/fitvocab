@@ -1686,6 +1686,12 @@ blockquote {
   letter-spacing: 0.2em;
   padding: 12px;
   cursor: pointer;
+  border-color: rgba(201,169,110,0.4);
+  color: var(--gold);
+}
+.success-modal-left .btn-ghost:hover {
+  background: rgba(201,169,110,0.08);
+  border-color: var(--gold);
 }
 
 /* ORDER SUMMARY TABLE */

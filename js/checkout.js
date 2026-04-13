@@ -173,17 +173,89 @@ function downloadInvoice() {
     <html>
     <head>
       <meta charset="UTF-8"/>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
       <style>
-        body { font-family: Georgia, serif; max-width: 600px; margin: 40px auto; color: #111; }
-        .header { text-align: center; border-bottom: 2px solid #c9a96e; padding-bottom: 20px; margin-bottom: 30px; }
-        .brand { font-size: 2rem; font-weight: bold; letter-spacing: 0.1em; color: #111; }
-        .invoice-title { font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: #888; margin-top: 4px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        td { padding: 12px 0; border-bottom: 1px solid #eee; font-size: 0.95rem; }
-        td:last-child { text-align: right; font-weight: bold; }
-        .total-row td { border-top: 2px solid #c9a96e; border-bottom: none; font-size: 1.1rem; color: #c9a96e; }
-        .footer { margin-top: 40px; text-align: center; font-size: 0.8rem; color: #aaa; }
-        .thank-you { font-size: 1.2rem; text-align: center; margin: 30px 0; font-style: italic; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+          font-family: 'Cormorant Garamond', Georgia, serif;
+          max-width: 640px;
+          margin: 60px auto;
+          color: #1a1a1a;
+          padding: 0 32px;
+          background: #fff;
+        }
+        .header {
+          text-align: center;
+          padding-bottom: 28px;
+          margin-bottom: 40px;
+          border-bottom: 1.5px solid #c9a96e;
+        }
+        .brand {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 2.4rem;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          color: #1a1a1a;
+        }
+        .invoice-title {
+          font-family: 'Tenor Sans', sans-serif;
+          font-size: 0.65rem;
+          letter-spacing: 0.35em;
+          text-transform: uppercase;
+          color: #c9a96e;
+          margin-top: 6px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        tr { border-bottom: 1px solid #ede8de; }
+        tr:last-child { border-bottom: none; }
+        td {
+          padding: 16px 0;
+          font-size: 1rem;
+          vertical-align: top;
+        }
+        .label {
+          font-family: 'Cormorant Garamond', serif;
+          font-style: italic;
+          font-size: 1rem;
+          color: #888;
+          width: 40%;
+        }
+        .value {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 1rem;
+          color: #1a1a1a;
+          text-align: right;
+          font-weight: 600;
+        }
+        .total-row td { border-top: 1.5px solid #c9a96e; padding-top: 20px; }
+        .total-row .label {
+          color: #c9a96e;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.1rem;
+        }
+        .total-row .value {
+          color: #c9a96e;
+          font-size: 1.4rem;
+        }
+        .tagline {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 1.15rem;
+          font-style: italic;
+          text-align: center;
+          margin: 48px 0 32px;
+          color: #555;
+        }
+        .footer {
+          text-align: center;
+          font-family: 'Tenor Sans', sans-serif;
+          font-size: 0.65rem;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: #bbb;
+          padding-top: 24px;
+          border-top: 1px solid #ede8de;
+        }
       </style>
     </head>
     <body>
@@ -192,17 +264,17 @@ function downloadInvoice() {
         <div class="invoice-title">Tax Invoice</div>
       </div>
       <table>
-        <tr><td>Invoice / Order ID</td><td>${d.paymentId}</td></tr>
-        <tr><td>Date</td><td>${d.date}</td></tr>
-        <tr><td>Product</td><td>${d.product}</td></tr>
-        <tr><td>Size</td><td>${d.size}</td></tr>
-        <tr><td>Base Price</td><td>₹${d.basePrice}</td></tr>
-        ${d.coupon ? `<tr><td>Discount (${d.coupon})</td><td>− ₹${d.discount}</td></tr>` : ''}
-        <tr class="total-row"><td>Total Paid</td><td>₹${d.finalPrice}</td></tr>
+        <tr><td class="label">Invoice / Order ID</td><td class="value">${d.paymentId}</td></tr>
+        <tr><td class="label">Date</td><td class="value">${d.date}</td></tr>
+        <tr><td class="label">Product</td><td class="value">${d.product}</td></tr>
+        <tr><td class="label">Size</td><td class="value">${d.size}</td></tr>
+        <tr><td class="label">Base Price</td><td class="value">&#8377;${d.basePrice}</td></tr>
+        ${d.coupon ? `<tr><td class="label">Discount (${d.coupon})</td><td class="value">&#8722; &#8377;${d.discount}</td></tr>` : ''}
+        <tr class="total-row"><td class="label">Total Paid</td><td class="value">&#8377;${d.finalPrice}</td></tr>
       </table>
-      <p class="thank-you">"Fit. The only vocab I know."</p>
+      <p class="tagline">"Fit. The only vocab I know."</p>
       <div class="footer">
-        FitVocab · fitvocab.in · hello@fitvocab.in<br/>
+        FitVocab &nbsp;·&nbsp; fitvocab.in &nbsp;·&nbsp; hello@fitvocab.in<br/><br/>
         Thank you for your order!
       </div>
     </body>
